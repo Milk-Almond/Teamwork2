@@ -17,15 +17,15 @@ The following categories are common and must not be redesigned by individual spe
 - frozen-core integrity manifest/check procedure;
 - team-level evidence, version, contribution, and integration requirements.
 
-In the currently available chart-improvement scaffold, examples of frozen elements are `core/common_instructions.md`, `core/input_schema.json`, `core/output_schema.json`, and the shared tools under `tools/`. These filenames are evidence from the available practice scaffold, not a substitute for inspecting the canonical `MASY1800_ET_Agent_Scaffold_v1_0` when it is added.
+In the professor-approved `MASY1800_Chart_Improvement_Practice_Scaffold_v1_0`, frozen/common elements include `core/common_instructions.md`, `core/input_schema.json`, `core/output_schema.json`, and the shared tools under `tools/`. The frozen-core manifest/check is used to verify that these common elements remain intact.
 
 ### Specialist-editable elements
-A specialist may change only the files or fields explicitly designated student-editable by the canonical scaffold. Typical editable categories are:
-- specialist instructions defining bounded expertise and operational rules;
-- agent metadata such as name, specialty, and version;
-- primary and contrast test cases;
-- the Specialist Agent Record / evidence record;
-- specialist-owned assets or examples allowed by the scaffold.
+A specialist may change only the files or fields explicitly designated student-editable by the scaffold. For a created chart-improvement specialist, the student-editable files are:
+- `specialist_instructions.md`;
+- `agent_metadata.json`;
+- `cases/primary.json`;
+- `records/agent_record.md`;
+- specialist-owned assets/responses where the scaffold workflow calls for them.
 
 No specialist may solve a local convenience problem by modifying frozen-core files. If a common contract appears inadequate, record the issue for team review rather than patching one specialist.
 
