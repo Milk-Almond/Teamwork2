@@ -1,0 +1,154 @@
+{
+"agent": {
+"name": "Business Chart Improvement Agent",
+"specialty": "evidence-preserving business visualization improvement",
+"version": "0.1-student"
+},
+"business_question": "Did “women and children first” apply on the Titanic? Compare survival rates for adult women, children under 16, and adult men across passenger classes. Exclude passengers with missing ages from these age-defined groups and state this limitation.",
+"business_answer_shown": "The observed survival pattern is consistent with “women and children first”: adult women and children under 16 had higher survival rates than adult men in every passenger class. Passenger class still mattered strongly, with substantially lower survival for all three groups in 3rd class. The chart presents this as a descriptive pattern, not proof of why the pattern occurred.",
+"baseline_chart_assessment": [
+{
+"issue": "The baseline title describes the variables but does not directly state the answer to the framed business question.",
+"why_it_matters": "The governing framework says the point should be immediately clear and the title should convey the point; the supplied question asks whether the survival pattern supports “women and children first.” ",
+"related_principle": "Visual Story / Tell the Story with the Title",
+"priority": "high"
+},
+{
+"issue": "The separate legend makes the viewer repeatedly map three colors back to series while comparing nine bars.",
+"why_it_matters": "The framework explicitly recommends direct series labeling when feasible so the viewer does not have to move back and forth between marks and a legend. ",
+"related_principle": "Communication / Tell the Story with the Title (direct labeling)",
+"priority": "medium"
+},
+{
+"issue": "Three equally saturated colors give all categories equal visual weight even though the central comparison is women-and-children versus adult men.",
+"why_it_matters": "Judicious, sparse color should direct attention to the main analytical contrast rather than create unnecessary categorical competition. ",
+"related_principle": "Use Color Effectively",
+"priority": "medium"
+},
+{
+"issue": "The vertical clustered bars, top-mounted percentage/sample-size labels, and wide legend increase scanning distance for a comparison that depends on precise rate differences.",
+"why_it_matters": "A simpler horizontal common-baseline layout can make category names, rates, and sample sizes readable in one visual path while preserving length-based comparison. ",
+"related_principle": "Use the Eye-Brain System of Seeing / Right Chart",
+"priority": "medium"
+},
+{
+"issue": "The baseline communicates the rates accurately, but it does not visually foreground the strong 3rd-class drop across all three groups.",
+"why_it_matters": "A direct subtitle can make the second major relationship evident without adding new data or changing the business question. ",
+"related_principle": "Visual Story / Answer Well-Framed Analytical Questions",
+"priority": "medium"
+}
+],
+"data_fidelity_checks": [
+{
+"check": "Record count and missing-age limitation",
+"result": "pass",
+"notes": "The source workbook contains 1,309 passenger records. 263 records have missing age, which is 20.1% of records, matching the baseline limitation statement."
+},
+{
+"check": "Age-group definitions",
+"result": "pass",
+"notes": "Children were defined as age <16; adults as age >=16. Adult women and adult men were separated using the source sex field. Records with missing age were excluded from all age-defined groups."
+},
+{
+"check": "1st-class values",
+"result": "pass",
+"notes": "Adult women: 126/130 survived = 96.9%; children <16: 7/8 = 87.5%; adult men: 48/146 = 32.9%. These match the baseline chart after one-decimal rounding."
+},
+{
+"check": "2nd-class values",
+"result": "pass",
+"notes": "Adult women: 76/87 survived = 87.4%; children <16: 27/28 = 96.4%; adult men: 12/146 = 8.2%. These match the baseline chart after one-decimal rounding."
+},
+{
+"check": "3rd-class values",
+"result": "pass",
+"notes": "Adult women: 53/115 survived = 46.1%; children <16: 32/79 = 40.5%; adult men: 46/307 = 15.0%. These match the baseline chart after one-decimal rounding."
+},
+{
+"check": "Scale, units, category order, and revised artifact values",
+"result": "pass",
+"notes": "The improved chart preserves the survival-rate percentage unit, a zero-based 0–100% comparison scale, passenger-class order (1st, 2nd, 3rd), group definitions, sample sizes, and all nine source-derived rates."
+}
+],
+"principles_applied": [
+{
+"principle": "Visual Story and Tell the Story with the Title",
+"change_made": "Replaced the descriptive title with a conclusion-oriented title stating that the survival pattern is consistent with “women and children first,” and added a short subtitle noting the lower 3rd-class survival.",
+"expected_communication_benefit": "The viewer receives the business answer before decoding individual bars, while the wording remains descriptive rather than causal. "
+},
+{
+"principle": "Communication / direct labeling",
+"change_made": "Removed the separate legend and directly labeled every row as Adult women, Children <16, or Adult men, with the percentage and n printed at the end of each bar.",
+"expected_communication_benefit": "Reduces eye travel and eliminates color-to-legend lookup while keeping sample-size context attached to each value. "
+},
+{
+"principle": "Use Color Effectively",
+"change_made": "Used one restrained accent color for women and children and neutral gray for adult men; category text makes the chart interpretable without color alone.",
+"expected_communication_benefit": "Uses color sparsely to emphasize the question’s main comparison and improves accessibility for viewers who cannot reliably distinguish multiple hues. "
+},
+{
+"principle": "Remove Chart Junk / increase signal-to-noise ratio",
+"change_made": "Removed the legend, heavy framing, and excess visual elements; retained only light reference gridlines, class headings, direct labels, and the required limitation note.",
+"expected_communication_benefit": "More of the visual attention is devoted to the nine survival rates and the class/group relationships. "
+},
+{
+"principle": "Use the Eye-Brain System of Seeing and Gestalt grouping",
+"change_made": "Reorganized the display into three clearly separated passenger-class sections with a repeated within-class order: Adult women, Children <16, Adult men.",
+"expected_communication_benefit": "Consistent grouping and proximity support rapid within-class and across-class comparison. "
+},
+{
+"principle": "Right Chart / Selection of the Basic Charts",
+"change_made": "Changed the clustered vertical bars to horizontal bars on a common zero baseline while preserving the same rates and class order.",
+"expected_communication_benefit": "Horizontal length comparisons support accurate judgment and provide space for direct category, percentage, and sample-size labels. "
+}
+],
+"improved_chart": {
+"artifact_created": true,
+"filename": "improved_chart.png",
+"chart_type": "Grouped horizontal bar chart with direct labels",
+"title": "Titanic survival patterns are consistent with “women and children first” in every class",
+"accessibility_notes": "The chart does not rely on a separate legend: every bar is text-labeled. Women and children share a restrained accent color while adult men are neutral gray, so the primary contrast is redundant in both text and color. The 0–100% common scale is retained, fonts are enlarged, gridlines are subdued, and sample sizes remain visible. Artifact: improved_chart.png"
+},
+"baseline_to_improved_comparison": [
+{
+"dimension": "Business message",
+"baseline": "Descriptive title names the groups and passenger class but leaves the conclusion to the viewer.",
+"improved": "Conclusion-oriented title answers the question directly while using cautious “consistent with” wording."
+},
+{
+"dimension": "Comparison structure",
+"baseline": "Three vertical bars per class support comparison but require scanning among clusters and top labels.",
+"improved": "Three separated horizontal class sections repeat the same group order, supporting within-class and across-class comparison."
+},
+{
+"dimension": "Series identification",
+"baseline": "Series are identified through a separate color legend.",
+"improved": "Each bar is directly named; the legend is eliminated."
+},
+{
+"dimension": "Color and emphasis",
+"baseline": "Blue, orange, and green are all saturated and equally prominent.",
+"improved": "Women and children use one accent color and adult men use neutral gray, emphasizing the analytical contrast with less color dependence."
+},
+{
+"dimension": "Data labels and sample sizes",
+"baseline": "Percentages and n values appear above each vertical bar.",
+"improved": "Percentages and n values sit immediately at the end of each corresponding horizontal bar."
+},
+{
+"dimension": "Scale and fidelity",
+"baseline": "Zero-based percentage scale and all nine values are accurate.",
+"improved": "The same zero-based 0–100% scale, values, sample sizes, definitions, class order, and missing-age limitation are preserved."
+}
+],
+"remaining_limitations": [
+"The chart is descriptive. Survival-rate differences alone do not establish the causal mechanism or prove how consistently a “women and children first” evacuation rule was enforced.",
+"Age is missing for 263 passengers (20.1% of 1,309 records), so the age-defined groups do not represent every passenger.",
+"The 1st-class child rate is based on only 8 children with known age; the chart shows n=8 but does not add confidence intervals or inferential statistics.",
+"No uncertainty intervals or hypothesis tests are shown because the supplied task asks for a rate comparison and the source materials do not specify an inferential analysis.",
+"The illustrative case study was used only to calibrate clarity/accessibility and the need for human contextual judgment; no case-specific title, colors, annotations, or chart type were copied. "
+],
+"abstention_or_more_information_needed": [
+"No specific intended management audience or decision context was supplied; both fields remain placeholders in the prompt packet. Audience-specific emphasis or decision guidance would require those details. "
+]
+}
