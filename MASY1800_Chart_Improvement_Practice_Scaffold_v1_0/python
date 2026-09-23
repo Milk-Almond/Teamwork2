@@ -1,0 +1,1 @@
+python tools/check_frozen_core.py
