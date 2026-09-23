@@ -1,9 +1,9 @@
-# Workflow Evidence and Blockers
+# Workflow Evidence and Remaining Work
 
 ## Verified evidence from the current repository
 On 2026-09-22, the shared repository was inspected through the GitHub connection.
 
-The repository contains `MASY1800_Chart_Improvement_Practice_Scaffold_v1_0`, including:
+The professor-approved course scaffold is `MASY1800_Chart_Improvement_Practice_Scaffold_v1_0`, and it is present in `Milk-Almond/Teamwork2`. It includes:
 - frozen/common instructions under `core/`;
 - common input and output schemas;
 - `tools/check_frozen_core.py`;
@@ -15,7 +15,7 @@ The repository contains `MASY1800_Chart_Improvement_Practice_Scaffold_v1_0`, inc
 
 The frozen-core manifest and current frozen files were checked against their SHA-256 values. Result: **FROZEN CORE INTACT**.
 
-Inspection of `START_HERE.md` and `CHATGPT_CODEX_WORKFLOW.md` confirms that the practice workflow is designed to:
+Inspection of `START_HERE.md` and `CHATGPT_CODEX_WORKFLOW.md` confirms that the workflow is designed to:
 1. inspect the frozen vs. student-editable architecture;
 2. create a specialist from the template;
 3. build a prompt packet locally;
@@ -27,18 +27,25 @@ Inspection of `START_HERE.md` and `CHATGPT_CODEX_WORKFLOW.md` confirms that the 
 
 The workflow documentation explicitly states that the scaffold does **not** call the OpenAI API and does **not** require a separate API key.
 
-## Blocker preserved for Team Lab 2
-The assignment names a canonical package: `MASY1800_ET_Agent_Scaffold_v1_0`. That exact package is not currently present in `Milk-Almond/Teamwork2` based on repository search and inspection.
+## Current Team Lab 2 status
+There is **no missing-scaffold blocker**. The professor-approved scaffold is the chart-improvement scaffold already in the repository.
 
-Therefore:
-- we do **not** claim that the exact Team Lab 2 canonical scaffold has been exercised;
-- the current chart-improvement scaffold is used only as concrete evidence of the shared scaffold pattern and local validation workflow;
-- when `MASY1800_ET_Agent_Scaffold_v1_0` is added, the team must inspect its actual frozen files, editable files, context intake, output contract, validator, and operating guide, then update the Team Agent Design and Integration Standard if any mapping differs.
+Verified so far:
+- correct scaffold identified and present;
+- frozen vs. student-editable architecture inspected;
+- frozen-core integrity checked successfully;
+- prompt-packet/build/validation workflow inspected;
+- shared team standard, inventory, and contribution workspace initialized.
 
-## Next verification action when the canonical package is available
-1. Commit an unchanged working copy outside the canonical ZIP.
-2. Run its included frozen-core/integrity check.
-3. Run or inspect the provided sample prompt-packet workflow.
-4. Save one structured output and run the included validator.
-5. Record the exact commands, pass/fail output, commit SHA, and any blocker here.
-6. Update the inventory/standard only through team review; never alter the canonical Brightspace ZIP.
+Still to preserve as workshop evidence before calling the lab fully complete:
+1. run or inspect one complete prompt-packet case with all required inputs;
+2. save one structured response and run `tools/validate_response.py` on it;
+3. preserve one deliberately weak/generic output and explain why it is insufficiently contextual;
+4. run or inspect one context-contrast case and record what changed appropriately;
+5. record the team's final review, any dissent, and the agreed report-out.
+
+## Verification discipline
+- Do not modify the frozen-core files to make a test pass.
+- Preserve failed/weak runs rather than overwriting them.
+- Record exact commands, pass/fail results, versions/commits, and limitations.
+- Update the team inventory only after the agreed evidence has been reviewed.
