@@ -1,2 +1,1 @@
-INSTRUCTOR PLACEHOLDER: Replace this line with the exact business question before distributing the exercise.
-
+Did “women and children first” apply on the Titanic? Compare survival rates for adult women, children under 16, and adult men across passenger classes. Exclude passengers with missing ages from these age-defined groups and state this limitation.
