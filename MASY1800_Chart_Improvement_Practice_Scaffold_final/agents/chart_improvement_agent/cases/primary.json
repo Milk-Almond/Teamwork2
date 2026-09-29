@@ -1,0 +1,18 @@
+{
+  "business_question_file": "agents/chart_improvement_agent/assets/business_question.txt",
+  "source_data_file": "course_materials/Titanic.xlsx",
+  "baseline_chart_file": "agents/chart_improvement_agent/assets/baseline_chart.png",
+  "visualization_principles_file": "course_materials/Data_Visualization_for_Business_Decisions_Principles.pdf",
+  "application_case_study_file": "course_materials/From_Pixels_to_Insights_Case_Study.pdf",
+  "intended_audience": "Classmates and the instructor, with no assumed specialist knowledge of Titanic data analysis.",
+  "decision_context": "Support a classroom discussion of whether observed survival outcomes were consistent with women and children first, while distinguishing outcome patterns from proof of policy enforcement.",
+  "requested_output_filename": "improved_chart.png",
+  "delivery_constraints": [
+    "PNG output",
+    "Preserve accurate values and relationships from the source data",
+    "Use readable labels and show survival rates as percentages",
+    "Show each comparison group's sample size",
+    "Keep the original baseline chart unchanged"
+  ],
+  "additional_context": "The baseline chart was created separately in ordinary ChatGPT. For this analysis, children are younger than 16 and adults are aged 16 or older. This cutoff is an analytical assumption, not a verified historical policy. The comparison groups are adult men, adult women, boys, and girls. Passengers with missing ages are excluded from these age-defined groups; verify and disclose the excluded count. Identify any other missing or invalid values affecting the calculation before proceeding. Do not infer consistent historical policy enforcement from survival rates alone."
+}
