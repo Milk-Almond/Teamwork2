@@ -1,7 +1,7 @@
 # Chart Improvement Specialist Agent Record
 
 - Repository / branch / commit:
-  [Enter the actual repository URL, branch, and commit identifier. If these have not been created, state “Not yet recorded.”]
+  Not yet recorded.
 
 - Agent name and version:
   Business Chart Improvement Agent.
