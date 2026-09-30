@@ -21,14 +21,12 @@ Evidence snapshot: [`67d739a`](https://github.com/Milk-Almond/Teamwork2/commit/6
 
 ## Practice-agent evidence and open items
 
-- **Version:** [Metadata][metadata] and the Agent Record identify `0.1-student`. The report's suggested `1.0-team` / “team-approved / ready for later integration” entry is not treated as an implemented release or completed verification. The commit above identifies the inspected repository snapshot.
+- **Version:** [Metadata][metadata] and the Agent Record identify `0.1-student`.
 - **Primary and revision evidence:** [Initial response][first] and [chart][first-chart] are preserved alongside the [revised response][retest] and [chart][retest-chart]. The Agent Record reports that both responses passed the supplied validator and that displayed rates/counts were independently recalculated. These are recorded results; this inventory update did not rerun the agent or validator.
 - **Contrast evidence:** The second run uses the same Titanic case and is a revision test, not a context-contrast test. The transfer file remains a template. A completed contrast case, its output, and a comparison of context-sensitive behavior remain pending.
 - **Verification and limitations:** The Agent Record still requests human verification of the original baseline and saved outputs, named human sign-off, and a recorded final frozen-core integrity check after revision. It also preserves the analytical age-cutoff assumption, 263 excluded records with unusable ages, small-subgroup sensitivity, color inconsistency, and residual report text. Validator success alone does not establish chart quality or analytical accuracy.
 
 ## Contribution lineage
-
-As reported in the supplied **Team Lab2.docx**, all five members collaborated and cross-checked the work:
 
 - **Shuoying:** helped establish and organize the shared workspace.
 - **Shenghao Ma:** took an active role in building and revising the agent.
@@ -37,20 +35,12 @@ As reported in the supplied **Team Lab2.docx**, all five members collaborated an
 
 ## Rules for later inventory updates
 
-These summarize the Lab 2 assignment and supplied team standard:
-
 1. Preserve FROZEN CORE, the common intake/output contract, and the canonical Brightspace ZIP. Maintain the technology → application → organization distinction in each course specialist.
 2. Compare candidates using common evidence and primary/context-contrast tests. Preserve a meaningful failure, the resulting revision, and remaining limitations.
 3. Before marking a specialist **team-approved**, link its version/commit, Agent Record, test cases and outputs, verification note, material human contributions, and the team's synthesis decision, including unresolved dissent.
 4. Record integration status separately from approval. Link outstanding interface, context, evidence, or verification issues in the integration notes.
 5. Update this inventory when the team accepts or revises a version. Retain prior evidence and document why a prior team decision changed.
 
-## Sources
-
-- **02_ET_Team_Lab_02_Developing_AI_Agents.docx:** inventory/workspace initialization and minimum evidence requirements.
-- **00_ET_Team_Lab_General_Instructions.docx:** the seven specialist names and Labs 3–9 sequence; version, contribution, testing, and integration discipline.
-- **Team Lab2.docx:** team standard, practice-agent comparison, and human contribution summary.
-- Linked repository evidence below, inspected at the snapshot above. The supplied Word documents were reference material; they are not stored at the repository root.
 
 [snapshot]: https://github.com/Milk-Almond/Teamwork2/commit/67d739a766e0aa579db3f33224cd4be7c92ef5e9
 [metadata]: MASY1800_Chart_Improvement_Practice_Scaffold_final/agents/chart_improvement_agent/agent_metadata.json
