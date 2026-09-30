@@ -1,6 +1,5 @@
 # Team Agent Inventory
 
-Shared inventory and version/contribution record for Team Lab 2 and later specialist integration.
 
 Evidence snapshot: [`67d739a`](https://github.com/Milk-Almond/Teamwork2/commit/67d739a766e0aa579db3f33224cd4be7c92ef5e9) on `main`, reviewed 2026-09-30. The chart agent is the Lab 2 practice entry; the seven course specialists below are reserved for Labs 3–9.
 
